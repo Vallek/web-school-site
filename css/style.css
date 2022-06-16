@@ -1,13 +1,37 @@
 @font-face {
 	font-family: 'Roboto';
+	font-style: normal;
 	font-weight: 400;
-	src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+	src: local(''),
+	url('../fonts/roboto-v30-latin_cyrillic-regular.woff2') format('woff2'),
+	url('../fonts/roboto-v30-latin_cyrillic-regular.woff') format('woff'); 
 }
 
 @font-face {
-	font-family: 'Roboto Bold';
+	font-family: 'Roboto';
+	font-style: italic;
+	font-weight: 400;
+	src: local(''),
+	url('../fonts/roboto-v30-latin_cyrillic-italic.woff2') format('woff2'), 
+	url('../fonts/roboto-v30-latin_cyrillic-italic.woff') format('woff'); 
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
 	font-weight: 700;
-	src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+	src: local(''),
+	url('../fonts/roboto-v30-latin_cyrillic-700.woff2') format('woff2'), 
+	url('../fonts/roboto-v30-latin_cyrillic-700.woff') format('woff'); 
+}
+
+@font-face {
+	font-family: 'Lobster';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+	url('../fonts/lobster-v28-latin_cyrillic-regular.woff2') format('woff2'), 
+	url('../fonts/lobster-v28-latin_cyrillic-regular.woff') format('woff'); 
 }
 
 .page {
@@ -43,22 +67,32 @@
 .site-menu {
 	display: flex;
 	flex-wrap: wrap;
+	align-self: stretch;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.site-menu > li:not(:nth-last-of-type(1)) {
-	margin-right: 37px;
+.menu-item {
+	min-height: 80px;
 }
 
-.site-menu a {
+.menu-link {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 18px;
 	color: #ffffff;
 	font-size: 20px;
 	line-height: 23px;
 }
 
-.site-menu a:hover {
+.menu-link:hover {
+	color: #213B7E;
+	background-color: #ffffff;
+}
+
+.menu-link-active {
 	color: #213B7E;
 	background-color: #ffffff;
 }
@@ -80,9 +114,8 @@
 /* Main */
 .main-content {
 	box-sizing: border-box;
-	width: 100%;
 	max-width: 1300px;
-	padding: 0 16px;
+	padding: 0 1em;
 	margin: 0 auto;
 	flex-grow: 1;
 }
@@ -104,6 +137,12 @@
 	display: block;
 	width: 100%;
 	margin-bottom: 15px;
+}
+
+.main-about {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .about {
@@ -140,6 +179,35 @@
 	color: #CF5510;
 }
 
+.lets-side {
+	padding: 0 2em;
+	margin-top: 37px;
+}
+
+.lets-text {
+	margin: 0;
+	position: relative;
+	color: #646464;
+	font-family: 'Lobster', fantasy;
+	font-size: 36px;
+}
+
+.lets-text::before {
+	position: absolute;
+	left: -33px;
+	top: -9px;
+	content: "\201C";
+	font-size: 64px;
+}
+
+.lets-text::after {
+	position: absolute;
+	right: -29px;
+	top: 36px;
+	content: "\201D";
+	font-size: 64px;
+}
+
 /* Main - Students */
 .students-heading {
 	font-family: 'Roboto', Helvetica, Arial, sans-serif;
@@ -150,21 +218,35 @@
 	margin-bottom: 24px;
 }
 
+.students-heading::after {
+	content: ' 👧👦';
+}
+
 .students {
 	display: flex;
 	flex-wrap: wrap;
+	gap: 30px;
 }
 
 .student {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* max-width: 30ch; */
 	flex: 1 1;
 	position: relative;
 	border: 1px solid grey;
-	margin-right: 30px;
-	margin-bottom: 30px;
+}
+
+.student-important::after {
+	content: 'НОВИЧЁК';
+	display: inline-block;
+	border-radius: 20px;
+	padding: 5px;
+	position: absolute;
+	top: -1em;
+	right: -1em;
+	color: #fff;
+	background-color: #3AA828;
 }
 
 .student-ava {
@@ -235,12 +317,6 @@
 @media screen and (max-width: 680px) {
 	.site-logo {
 		margin: 15px 0;
-	}
-	.site-menu {
-		margin-bottom: 15px;
-	}
-	.site-menu > li:not(:nth-last-of-type(1)) {
-		margin-bottom: 15px;
 	}
 	.login-button {
 		margin-bottom: 15px;
