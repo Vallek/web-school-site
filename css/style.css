@@ -316,10 +316,13 @@
 /* Responsive */
 @media screen and (max-width: 680px) {
 	.site-logo {
-		margin: 15px 0;
+		margin: 1em 0;
+	}
+	.site-menu {
+		margin-bottom: 1em;
 	}
 	.login-button {
-		margin-bottom: 15px;
+		margin-bottom: 1em;
 	}
 }
 
