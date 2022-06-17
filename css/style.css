@@ -130,13 +130,10 @@
 	margin-bottom: 25px;
 }
 
-.photos {
-	max-width: 634px;
-}
-
 .class-photo {
 	display: block;
 	width: 100%;
+	max-width: 634px;
 	margin-bottom: 15px;
 }
 
