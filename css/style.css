@@ -357,6 +357,10 @@
 	border: none;
 }
 
+.login-form > input {
+	padding: 0 1em;
+}
+
 /* Footer */
 .footer {
 	box-sizing: border-box;
