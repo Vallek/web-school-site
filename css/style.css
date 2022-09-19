@@ -318,6 +318,7 @@
 .login-popup {
 	display: none;
 	position: absolute;
+	z-index: 2;
 	top: 80px;
 	left: 50%;
 	transform: translateX(-50%);
