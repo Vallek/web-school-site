@@ -44,6 +44,7 @@
 
 /* Шапка */
 .header {
+	position: relative;
 	box-sizing: border-box;
 	display: flex;
 	flex-wrap: wrap;
@@ -319,9 +320,9 @@
 	display: none;
 	position: absolute;
 	z-index: 2;
-	top: 80px;
+	bottom: 0;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translate(-50%, 100%);
 	box-sizing: border-box;
 	width: 100%;
 	max-width: 500px;
