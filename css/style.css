@@ -344,6 +344,7 @@
 	max-width: 444px;
 	min-height: 55px;
 	margin-bottom: 56px;
+	border: 1px solid #808080;
 }
 
 .popup-button {
