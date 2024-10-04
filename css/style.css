@@ -71,8 +71,8 @@
 	align-self: stretch;
 	list-style: none;
 	margin: 0;
-	margin-right: -110px;
 	padding: 0;
+	padding-left: 110px;
 }
 
 .menu-item {
