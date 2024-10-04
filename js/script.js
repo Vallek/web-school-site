@@ -1,10 +1,16 @@
 'use strict';
-let loginButton = document.querySelector('.login-button');
-let popUp = document.querySelector('.login-popup');
+let signupButton = document.querySelector('.signup-button');
+let popUp = document.querySelector('.signup-popup');
+let closeButton = document.querySelector('.signup-close');
 
-loginButton.addEventListener('click', showPopUop);
+signupButton.addEventListener('click', showPopUop);
+closeButton.addEventListener('click', closePopUop);
 
 function showPopUop(evt) {
 	evt.preventDefault();
 	popUp.classList.toggle('visible');	
+}
+
+function closePopUop() {
+	popUp.classList.remove('visible');	
 }

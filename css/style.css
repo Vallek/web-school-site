@@ -39,7 +39,7 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 /* Шапка */
@@ -98,7 +98,7 @@
 	background-color: #ffffff;
 }
 
-.login-button {
+.signup-button {
     box-sizing: border-box;
 	display: inline-block;
 	width: 153px;
@@ -123,7 +123,7 @@
 }
 
 .main-heading {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	font-size: 30px;
 	line-height: 35px;
@@ -153,7 +153,7 @@
 }
 
 .info-heading {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-size: 25px;
 	line-height: 29px;
@@ -162,7 +162,7 @@
 }
 
 .info-text {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 21px;
@@ -209,7 +209,7 @@
 
 /* Main - Students */
 .students-heading {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	font-size: 31px;
 	line-height: 36px;
@@ -228,6 +228,7 @@
 }
 
 .student {
+	max-width: 320px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -266,7 +267,7 @@
 
 /* Contacts */
 .contacts-heading {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	font-size: 30px;
 	line-height: 35px;
@@ -296,7 +297,7 @@
 }
 
 .about-heading {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	font-size: 30px;
 	line-height: 35px;
@@ -316,41 +317,69 @@
 }
 
 /* Popup */
-.login-popup {
+.signup-popup {
 	display: none;
-	position: absolute;
+	position: fixed;
 	z-index: 2;
-	bottom: 0;
+	top: 160px;
 	left: 50%;
-	transform: translate(-50%, 100%);
+	transform: translateX(-50%);
 	box-sizing: border-box;
 	width: 100%;
 	max-width: 500px;
 	min-height: 418px;
-	padding: 26px 28px 56px;
+	padding: 26px 28px;
 	background-color: white;
 	border: 1px solid #213B7E;
 	box-shadow: 5px 5px 4px 0 rgba(0,0,0,0.25);
 }
 
-.login-form {
+.signup-form {
 	display: flex;
-	align-items: center;
 	flex-direction: column;
 }
 
-.login-form > input {
-	width: 100%;
-	max-width: 444px;
-	min-height: 55px;
-	margin-bottom: 56px;
-	border: 1px solid #808080;
+.signup-heading {
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 33px;
 }
 
-.popup-button {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+.signup-label {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
 	font-weight: 400;
+	text-align: left;
+	margin-bottom: 9px;
+}
+
+.signup-form > input {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 444px;
+	min-height: 40px;
+	padding: 0 1em;
+	margin-bottom: 21px;
+	border: 1px solid #808080;
 	font-size: 18px;
+}
+
+.signup-about {
+	box-sizing: border-box;
+	min-height: 280px;
+	padding: 1em;
+	margin-bottom: 32px;
+	resize: none;
+}
+
+.signup-button {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	align-self: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -362,8 +391,16 @@
 	border: none;
 }
 
-.login-form > input {
-	padding: 0 1em;
+.signup-close {
+	border: none;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	display: block;
+	width: 32px;
+	height: 32px;
+	color: #fff;
+	background-color: #EA6113;
 }
 
 /* Footer */
@@ -422,7 +459,7 @@
 	.site-menu {
 		margin-bottom: 1em;
 	}
-	.login-button {
+	.signup-button {
 		margin-bottom: 1em;
 	}
 }
