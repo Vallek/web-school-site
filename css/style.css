@@ -50,13 +50,21 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+	gap: 3em 1em;
 	width: 100%;
 	max-width: 1300px;
 	margin: 0 auto;
 	margin-bottom: 36px;
 	min-height: 80px;
-	padding: 0 16px;
+	padding: 0 1em;
 	background-color: #213B7E;
+}
+
+@media (max-width: 860px) {
+	.header {
+		padding: 1em;
+		flex-direction: column;
+	}
 }
 
 .site-logo {
@@ -68,11 +76,18 @@
 .site-menu {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	align-self: stretch;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	padding-left: 110px;
+}
+
+@media (max-width: 860px) {
+	.site-menu {
+		padding-left: 0px;
+	}
 }
 
 .menu-item {
@@ -257,6 +272,13 @@
 	align-items: center;
 	flex: 1 1 200px;
 	position: relative;
+}
+
+@media (max-width: 515px) {
+	.student {
+		width: 100%;
+		max-width: initial;
+	}
 }
 
 .student-ava {
@@ -475,24 +497,4 @@
 /* JS */
 .visible {
 	display: block;
-}
-
-/* Responsive */
-@media screen and (max-width: 680px) {
-	.site-logo {
-		margin: 1em 0;
-	}
-	.site-menu {
-		margin-bottom: 1em;
-	}
-	.signup-button {
-		margin-bottom: 1em;
-	}
-}
-
-@media (max-width: 515px) {
-	.student {
-		width: 100%;
-		max-width: initial;
-	}
 }
