@@ -254,7 +254,6 @@
 	align-items: center;
 	flex: 1 1;
 	position: relative;
-	border: 1px solid grey;
 }
 
 .student-important::after {
@@ -270,13 +269,18 @@
 }
 
 .student-ava {
-	height: 200px;
-	width: auto;
+	width: 200px;
+	height: 270px;
+	object-fit: contain;
+	object-position: bottom;
+	background-color: #86C6F4;
+	margin-bottom: 8px;
 }
 
 .student-name {
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
 	text-align: center;
-	margin: 15px 0;
 }
 
 .important-tag {
