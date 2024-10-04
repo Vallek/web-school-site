@@ -71,6 +71,7 @@
 	align-self: stretch;
 	list-style: none;
 	margin: 0;
+	margin-right: -110px;
 	padding: 0;
 }
 
@@ -122,20 +123,39 @@
 	flex-grow: 1;
 }
 
-.main-heading {
+.main-welcome {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	font-size: 30px;
 	line-height: 35px;
 	margin: 0;
-	margin-bottom: 25px;
+	margin-bottom: 24px;
+}
+
+.intro {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 24px 88px;
+	margin-bottom: 24px;
+}
+
+.main-heading {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 70px;
+	text-transform: uppercase;
+}
+
+.heading-small {
+	text-transform: lowercase;
+	font-weight: 400;
 }
 
 .class-photo {
 	display: block;
 	width: 100%;
-	max-width: 634px;
-	margin-bottom: 15px;
+	max-width: 523px;
 }
 
 .main-info {
