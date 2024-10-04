@@ -250,10 +250,30 @@
 .student {
 	max-width: 320px;
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	align-items: center;
 	flex: 1 1;
 	position: relative;
+}
+
+.student-ava {
+	width: 200px;
+	height: 270px;
+	object-fit: contain;
+	object-position: bottom;
+	flex: 1 1 auto;
+	background-color: #86C6F4;
+	margin-bottom: 8px;
+}
+
+.student-name {
+	display: block;
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	text-align: center;
+	flex-grow: 1;
+	background-color: #fff;
 }
 
 .student-important::after {
@@ -266,27 +286,6 @@
 	right: -1em;
 	color: #fff;
 	background-color: #3AA828;
-}
-
-.student-ava {
-	width: 200px;
-	height: 270px;
-	object-fit: contain;
-	object-position: bottom;
-	background-color: #86C6F4;
-	margin-bottom: 8px;
-}
-
-.student-name {
-	font-family: 'Roboto', sans-serif;
-	font-size: 20px;
-	text-align: center;
-}
-
-.important-tag {
-	position: absolute;
-	top: -7px;
-	right: -7px;
 }
 
 /* Contacts */
