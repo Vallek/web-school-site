@@ -238,7 +238,7 @@
 }
 
 .student-important::after {
-	content: 'НОВИЧЁК';
+	content: 'ОТЛИЧНИК';
 	display: inline-block;
 	border-radius: 20px;
 	padding: 5px;
