@@ -102,14 +102,16 @@
 	color: #ffffff;
 	font-size: 20px;
 	line-height: 23px;
+	text-decoration: none;
 }
 
 .menu-link:hover {
 	color: #213B7E;
-	background-color: #ffffff;
+	background-color: #ececec;
 }
 
-.menu-link-active {
+/* Селектор по двум классам, чтобы переписать цвет по ховеру */
+.menu-link.menu-link-active {
 	color: #213B7E;
 	background-color: #ffffff;
 }
